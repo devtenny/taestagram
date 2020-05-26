@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}- Upload{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 panel panel-default">
+        <form action="" method="post" enctype="multipart/form-data">   {# 파일이나 이미지를 서버로 전송할 때 주로 사용하는 인코딩 방식 #}
+            {{form.as_p}}
+            {% csrf_token %}
+            <input type="submit" class="btn btn-primary" value="Upload">  {# 제출 버튼 #}
+        </form>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+{% endblock %}
